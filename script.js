@@ -1,5 +1,5 @@
 let credentials;
-const maxPrepTime = 40000;
+const maxPrepTime = 0//40000;
 const formId = window.location.search.split("=")[1]
 
 function sendCheatReport() {
