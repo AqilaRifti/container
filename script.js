@@ -1,7 +1,7 @@
 let credentials;
 const maxPrepTime = 0//40000;
 const formId = window.location.search.split("=")[1]
-
+alert("updated")
 function sendCheatReport() {
     const xhr = new XMLHttpRequest();
     const baseUrl = "https://anticheat.up.railway.app/report"
@@ -10,9 +10,9 @@ function sendCheatReport() {
     xhr.responseType = "json";
     xhr.onload = () => {
         if (xhr.readyState == 4 && xhr.status == 200) {
-            console.log(credentials, xhr.response);
+            alert(credentials, xhr.response);
         } else {
-            console.log(`Error: ${xhr.status}`);
+            alert(`Error: ${xhr.status}`);
         }
     };
 }
