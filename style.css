@@ -3,7 +3,17 @@ main, body, html {
     padding: 0;
     height: 100%;
 }
+/* Disable text selection for the entire body */
+body {
+    -webkit-user-select: none; /* Disable text selection on iOS */
+    user-select: none; /* Disable text selection on other devices */
+}
 
+/* Allow user interaction with buttons and other interactive elements */
+button, a, input, textarea {
+    -webkit-user-select: text; /* Re-enable text selection for buttons and form elements */
+    user-select: text; /* Re-enable text selection for buttons and form elements */
+}
 iframe {
     width: 100%;
     height: 100%;
