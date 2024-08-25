@@ -80,11 +80,12 @@ async function onLoad() {
     setTimeout(registerVisibilityEventListenerRemover, maxPrepTime+10000)
 }
 function onStart() {
+    console.log("trigrredered")
+    credentials = document.getElementById("credentials").value
     if (document.getElementById("credentials").value === "") {
         return
     }
     document.getElementById("popup").style.display = "none";
-    credentials = document.getElementById("credentials").value
 }
 
 
@@ -107,6 +108,7 @@ function onClipboardChange() {
         }},
     )
 }
+registerStartButtonEventListener()
 let docState = {
     _hidden: document.hidden,
     
@@ -134,6 +136,7 @@ let docState = {
 }
 
 function registerStartButtonEventListener() {
+    console.log("t")
     document.getElementById("close").addEventListener("click", onStart);
 }
 
@@ -154,5 +157,4 @@ function registerOnClipboardChangeEventListener() {
 }
 
 registerLoadEventListener()
-registerStartButtonEventListener()
 registerOnClipboardChangeEventListener()
